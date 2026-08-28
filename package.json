@@ -1,0 +1,12 @@
+{
+"name": "ebay-deletion-webhook",
+"version": "1.0.0",
+"description": "eBay Marketplace Account Deletion notification endpoint",
+"main": "server.js",
+"scripts": {
+"start": "node server.js"
+},
+"dependencies": {
+"express": "^5.1.0"
+}
+}
