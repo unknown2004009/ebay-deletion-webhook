@@ -169,6 +169,34 @@ information, please contact the application owner.
 `);
 });
 
+// OAuth accepted
+app.get("/oauth/success", (req, res) => {
+res.status(200).send(`
+<html>
+<head><title>eBay Authorization Successful</title></head>
+<body>
+<h1>Authorization successful</h1>
+<p>Your eBay account has authorized the application.</p>
+<p>You can close this page.</p>
+</body>
+</html>
+`);
+});
+
+// OAuth declined
+app.get("/oauth/declined", (req, res) => {
+res.status(200).send(`
+<html>
+<head><title>eBay Authorization Declined</title></head>
+<body>
+<h1>Authorization declined</h1>
+<p>You did not authorize the application.</p>
+<p>You can close this page.</p>
+</body>
+</html>
+`);
+});
+
 // 404 handler
 app.use((req, res) => {
 res.status(404).json({
